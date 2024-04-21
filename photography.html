@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+    <title>Photography display</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <h3>💼Ezinne Elekwa</h3>
+
+            <!-- Hamburger menu icon -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./photography.html">Photography</a></li>
+                <li><a href="./blog.html">Blogs</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="image-container">
+        <h2>Photography Display</h2>
+        <div class="image-grid" id="imageGrid">
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+<script>
+    const imageUrls = [
+        'https://img.freepik.com/free-photo/nature-night-sky-stars-galaxy-aurora-generative-ai_188544-12466.jpg?t=st=1713246820~exp=1713250420~hmac=771aa80d29e2213bf4a0878424ae13ea262c037d6b15616d6a6168b0c4cd29e4&w=900',
+        'https://img.freepik.com/free-photo/old-beech-forest-autunm_181624-29633.jpg?t=st=1713246926~exp=1713250526~hmac=f4c0e87ac66c3daca4bb1e3dc33298608017e193c47403d6e26403db5408d58f&w=740',
+        'https://img.freepik.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?t=st=1713247093~exp=1713250693~hmac=a028544f2398bf849a607bfdd9920bdd619912d51ab95440a6ac7233d384253a&w=740',
+        'https://img.freepik.com/free-photo/digital-screen-with-environment-day_23-2148884835.jpg?t=st=1713247468~exp=1713251068~hmac=b110d0bbcafd46500fbf7a473638cfc7a93dc7210c470f99253f39d85ca89f60&w=740',
+        'https://img.freepik.com/free-photo/vibrant-scenery-river-middle-forest-yakushima-japan_181624-42970.jpg?t=st=1713247370~exp=1713250970~hmac=cf3d4b1fee1f9976d5c0f2cf2baf8d161f682f49cfd16a928f98555e12dec504&w=740',
+        'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1713247186~exp=1713250786~hmac=7d2ac1995bed749ccf0fd689ad8e958d74b7741195f0232b8eee8cf5e7554647&w=900',
+        'https://img.freepik.com/free-photo/mesmerizing-scenery-green-mountains-with-cloudy-sky-surface_181624-27189.jpg?t=st=1713247342~exp=1713250942~hmac=45908b6441c0ffd72d232b97191df15e84d8dd2ac623a7f674d17d409973165c&w=740',
+        'https://img.freepik.com/free-photo/narrow-road-green-grassy-field-surrounded-by-green-trees-with-bright-sun-background_181624-9968.jpg?t=st=1713247283~exp=1713250883~hmac=344aa53b9fbee6f8c4a982fbf0a1121b1a891259ce7bfa56fefb69ad52ffc81a&w=740',
+        'https://img.freepik.com/free-photo/flowing-river-background-natural-boundary_91128-4547.jpg?t=st=1713247574~exp=1713251174~hmac=f010b8f9e7c912470c9f15d4763081806ceae700c47f0a4b08a331fa9e535d6f&w=996',
+        'https://img.freepik.com/free-photo/sphere-with-trees_1048-2609.jpg?t=st=1713247509~exp=1713251109~hmac=9456de6be04adfc936a59d7b03eb48d353237e26557716cd4e4908576bcc8769&w=740',
+        'https://img.freepik.com/free-photo/mesmerizing-view-silhouette-tree-savanna-plains-sunset_181624-18108.jpg?t=st=1713247554~exp=1713251154~hmac=b751ebe62822e279e08db0615e38b368a9a80732c4f455ec566d2a37995a656d&w=740',
+        'https://img.freepik.com/free-photo/group-elephants-big-green-tree-wilderness_181624-16897.jpg?t=st=1713247153~exp=1713250753~hmac=aef1671074424cfb9f9b7a5510f312aa2963119563a07b9477994dcc8222b8cf&w=740',
+    ]
+
+    const imageGrid = document.getElementById('imageGrid');
+
+    // Loop through imageUrls and create image elements
+    imageUrls.forEach(url => {
+        const imageItem = document.createElement('div');
+        imageItem.classList.add('image-item');
+
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = 'Image';
+        
+        // Append image to imageItem
+        imageItem.appendChild(img);
+        
+        // Append imageItem to imageGrid
+        imageGrid.appendChild(imageItem);
+    });
+</script>
+</html>
