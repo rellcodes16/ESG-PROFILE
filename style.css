@@ -103,6 +103,14 @@ body{
     width: 600px
 }
 
+.video-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .image-container{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -280,36 +288,6 @@ body{
     margin-right: 10px;
     align-self: center;
 }
-
-/* .sidebar {
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: lightblue;
-    color: rgb(77, 75, 75);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 80px;
-    padding-left: 20px;
-} */
-
-/* .sidebar ul {
-    padding: 30px;
-    list-style-type: none;
-} */
-
-/* .sidebar ul li {
-    padding: 10px;
-    margin-bottom: 5px;
-} */
-
-/* .sidebar ul li a {
-    text-decoration: none;
-    color: rgb(77, 75, 75);
-    display: block;
-    margin-bottom: 10px;
-} */
 
 .menu-toggle {
     display: none;

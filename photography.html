@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
-    <title>Photography display</title>
+    <title>Media</title>
 </head>
 <body>
     <div class="header">
@@ -22,11 +22,15 @@
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./photography.html">Photography</a></li>
+                <li><a href="./photography.html">Media</a></li>
                 <li><a href="./blog.html">Blogs</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
+    </div>
+    <div class="video-container">
+        <h2>Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AkbGz3CYvqE?si=WS4W_BmJpbFJ370t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="image-container">
         <h2>Photography Display</h2>
@@ -37,6 +41,9 @@
 
     <script src="./script.js"></script>
 </body>
+
+
+<!-- Script for the media display -->
 <script>
     const imageUrls = [
         'https://img.freepik.com/free-photo/nature-night-sky-stars-galaxy-aurora-generative-ai_188544-12466.jpg?t=st=1713246820~exp=1713250420~hmac=771aa80d29e2213bf4a0878424ae13ea262c037d6b15616d6a6168b0c4cd29e4&w=900',
@@ -55,7 +62,6 @@
 
     const imageGrid = document.getElementById('imageGrid');
 
-    // Loop through imageUrls and create image elements
     imageUrls.forEach(url => {
         const imageItem = document.createElement('div');
         imageItem.classList.add('image-item');
@@ -63,11 +69,9 @@
         const img = document.createElement('img');
         img.src = url;
         img.alt = 'Image';
-        
-        // Append image to imageItem
+
         imageItem.appendChild(img);
-        
-        // Append imageItem to imageGrid
+
         imageGrid.appendChild(imageItem);
     });
 </script>
